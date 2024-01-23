@@ -6,6 +6,7 @@ import multer from 'multer';
 const router = express.Router();
 
 const imageStorage = multer.diskStorage({
+    //destination: This property specifies the directory where the uploaded files will be stored. In this case, it's set to the 'images' directory. The destination function receives three arguments: req (the request object), file (the uploaded file), and cb (a callback function). The callback function (cb) is called to specify the destination directory.
     destination: function(req,file, cb){
         cb(null, 'images')
     },
